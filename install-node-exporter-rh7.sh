@@ -1,7 +1,32 @@
 #!/bin/bash
 #
-# For RedHat version 7 distributions with "systemd" Linux initialization system.
+# install-node-exporter-rh7.sh -- Automatically install Node exporter on
+# RedHat version 7 distributions with "systemd" Linux initialization system.
+#
+# (C) Copyright 2019, Maxence Grymonprez <maxgrymonprez@live.fr>
+#
+# install-node-exporter-rh7.sh is free software: you can redistribute
+# it and/or modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# install-node-exporter-rh7.sh is distributed in the hope that
+# it will be useful, but WITHOUT ANY WARRANTY; without even the
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+# PURPOSE.
+# See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with help.sh. If not, see <http://www.gnu.org/licenses/>.
+#
+# Usage:
+#   ./install-node-exporter-rh7.sh
+# Note:
+#   Requires a user with highest permissions
 
+# You can replace the version number and the architecture name.
+# Find out the latest release of Node exporter on the official
+# GitHub repository: https://github.com/prometheus/node_exporter/releases
 # Version of Node Exporter
 version="0.18.1"
 # System architecture
@@ -16,7 +41,7 @@ if [ -f node_exporter ]; then
     exit 1
 fi
 
-# Download Node Exporter for Linux 64-bit
+# Download Node Exporter
 curl -LO https://github.com/prometheus/node_exporter/releases/download/v$version/node_exporter-$version.linux-$arch.tar.gz
 
 # Extract node_exporter binary from archive
