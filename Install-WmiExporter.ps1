@@ -61,10 +61,15 @@ if (-not (Test-Path -Path "C:\prometheus" -PathType Container)) {
 
 # Download WMI Exporter
 Write-Verbose -Message "Download WMI Exporter"
-(New-Object System.Net.WebClient).DownloadFile(
-    "https://github.com/martinlindhe/wmi_exporter/releases/download/v$Version/wmi_exporter-$Version-$Arch.exe",
-    "C:\prometheus\wmi_exporter.exe"
-)
+try {
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    (New-Object System.Net.WebClient).DownloadFile(
+        "https://github.com/martinlindhe/wmi_exporter/releases/download/v$Version/wmi_exporter-$Version-$Arch.exe",
+        "C:\prometheus\wmi_exporter.exe"
+    )
+} catch {
+    throw ("An error occurred during the download of WMI Exporter. Error message: " + $_.Exception.Message)
+}
 
 # Create inputs directory for WMI Exporter if it does not exist
 if (-not (Test-Path -Path "C:\prometheus\textfile_inputs" -PathType Container)) {
