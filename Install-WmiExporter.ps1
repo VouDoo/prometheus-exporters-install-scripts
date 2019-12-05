@@ -43,8 +43,8 @@ Set-Variable -Name VerbosePreference -Value "Continue" -Scope Global
 # You can replace the version number and the architecture name.
 # Find out the latest release of WMI exporter on the official
 # GitHub repository: https://github.com/martinlindhe/wmi_exporter/releases
-# Version of Node Exporter
-$Version = "0.8.1"
+# Version of WMI Exporter
+$Version = "0.9.0"
 # System architecture
 $Arch = "amd64"
 
