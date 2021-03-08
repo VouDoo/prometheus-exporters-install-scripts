@@ -28,7 +28,7 @@
 # Find out the latest release of Node exporter on the official
 # GitHub repository: https://github.com/prometheus/node_exporter/releases
 # Version of Node Exporter
-version="1.0.1"
+version="1.1.2"
 # System architecture
 arch="amd64"
 
