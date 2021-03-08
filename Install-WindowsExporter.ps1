@@ -44,7 +44,7 @@ Set-Variable -Name VerbosePreference -Value "Continue" -Scope Global
 # Find out the latest release of Windows exporter on the official
 # GitHub repository: https://github.com/prometheus-community/windows_exporter/releases
 # Version of Windows Exporter
-$Version = "0.14.0"
+$Version = "0.16.0"
 # System architecture
 $Arch = "amd64"
 
