@@ -58,7 +58,7 @@ chown node_exporter:node_exporter node_exporter
 chmod o-x node_exporter
 
 # Create service file
-cat > /etc/systemd/system/node_exporter.service << EOL
+cat > /etc/systemd/system/node_exporter.service << EOF
 [Unit]
 Description=Node Exporter
 After=network.target
@@ -71,7 +71,7 @@ ExecStart=/usr/local/bin/node_exporter
 
 [Install]
 WantedBy=multi-user.target
-EOL
+EOF
 
 # Reload the system daemon
 systemctl daemon-reload

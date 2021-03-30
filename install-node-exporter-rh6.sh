@@ -65,7 +65,7 @@ chmod 640 /var/log/node_exporter.log
 chown node_exporter:node_exporter /var/log/node_exporter.log
 
 # Create log rotation file
-cat > /etc/logrotate.d/node_exporter << EOL
+cat > /etc/logrotate.d/node_exporter << EOF
 /var/log/node_exporter.log {
     weekly
     missingok
@@ -74,10 +74,10 @@ cat > /etc/logrotate.d/node_exporter << EOL
     delaycompress
     create 640 node_exporter adm
 }
-EOL
+EOF
 
 # Create service file
-cat > /etc/init.d/node_exporter << \EOL
+cat > /etc/init.d/node_exporter << \EOF
 #!/bin/bash
 #
 # httpd        Startup script for the Node Exporter
@@ -143,7 +143,7 @@ case "$1" in
 esac
 
 exit $RETVAL
-EOL
+EOF
 
 # Set permissions on service file
 chmod 755 /etc/init.d/node_exporter
