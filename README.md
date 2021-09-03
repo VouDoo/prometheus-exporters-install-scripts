@@ -4,19 +4,19 @@ Scripts to automatically install Exporters for Prometheus
 
 ## One-liners
 
-- [install-node-exporter-rh6.sh](install-node-exporter-rh6.sh)
+- [Install Node Exporter on Redhat 6 distributions](install-node-exporter-rh6.sh)
 
   ``` sh
   curl -s https://raw.githubusercontent.com/VouDoo/prometheus-exporters-install-scripts/master/install-node-exporter-rh6.sh | sudo bash
   ```
 
-- [install-node-exporter-rh7.sh](install-node-exporter-rh7.sh)
+- [Install Node Exporter on Redhat 7 distributions](install-node-exporter-rh7.sh)
 
   ``` sh
   curl -s https://raw.githubusercontent.com/VouDoo/prometheus-exporters-install-scripts/master/install-node-exporter-rh7.sh | sudo bash
   ```
 
-- [Install-WindowsExporter.ps1](Install-WindowsExporter.ps1)
+- [Install Windows Exporter on Windows OS](Install-WindowsExporter.ps1)
 
   _Run in a PowerShell console as Administrator._
 
