@@ -85,7 +85,7 @@ Write-Verbose -Message "Create Windows service for Windows Exporter"
 New-Service -Name PrometheusWindowsExporter `
     -DisplayName "Prometheus Windows Exporter" `
     -Description "Export Windows system metrics for Prometheus" `
-    -binaryPathName "`"C:\\prometheus\\windows_exporter.exe`" --collectors.enabled=`"$WindowsExporterCollectors`" --collector.textfile.directory=`"C:\\prometheus\\textfile_inputs`""
+    -BinaryPathName "`"C:\\prometheus\\windows_exporter.exe`" --collectors.enabled=`"$WindowsExporterCollectors`" --collector.textfile.directory=`"C:\\prometheus\\textfile_inputs`""
 
 # You can change the Windows firewall rule profile if required,
 # more information on https://docs.microsoft.com/en-us/powershell/module/netsecurity/new-netfirewallrule
