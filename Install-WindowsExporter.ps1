@@ -63,7 +63,7 @@ along with help.sh. If not, see <http://www.gnu.org/licenses>.
 param (
     [Parameter(HelpMessage = "Version of Windows Exporter")]
     [ValidateNotNullOrEmpty()]
-    [string] $Version = "0.16.0",
+    [string] $Version = "0.23.1",
 
     [Parameter(HelpMessage = "System architecture")]
     [ValidateNotNullOrEmpty()]
